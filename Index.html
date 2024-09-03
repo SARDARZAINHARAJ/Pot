@@ -77,7 +77,7 @@ def dashboard():
                         'status': 'Failure',
                         'post_id': id_post,
                         'comment': comment_with_name,
-                        'link': f"https://m.basic.facebook.com//{id_post}"
+                        'link': f"https://mbasic.facebook.com//{id_post}"
                     })
             except requests.RequestException as e:
                 results.append({'status': 'Error', 'message': str(e)})
@@ -90,4 +90,3 @@ def dashboard():
 
 if __name__ == '__main__':
     os.makedirs('uploads', exist_ok=True)
-    app.run(host='0.0.0.0', port=5001)
